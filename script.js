@@ -60,9 +60,7 @@ function generateMessage (name,favLang){
     console.log( `Hello ${name}! I see you love ${favLang}.Keep Coding` )
 }
 generateMessage("Jesse","Javascript")
-
 /* Ternary Operator */
-
 function checkAge (age) {
     const ifAdult = `${age}` > 18 ? "You are an Adult" : "You are a minor"
     console.log(ifAdult)
@@ -82,4 +80,17 @@ console.log(0 && 'some codes')
 
 console.log('Jesse' || 'some codes')
 console.log(0 || 'some codes')
+
+/* Array map method = functional*/
+const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.slice().map((num)=>num * 2)
+console.log(doubled)
+
+const people = [
+    { name: "Alice", age: 25 },
+    { name: "Bob", age: 30 },
+    { name: "Charlie", age: 35 },
+];
+
+/*  Filter method*/
 
