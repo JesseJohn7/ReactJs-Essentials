@@ -93,4 +93,27 @@ const people = [
 ];
 
 /*  Filter method*/
+const numero =  [1, 2, 3, 4, 5, 6]
+const newNumero = numero.slice().filter((nume) => nume % 2 == 0)
+console.log(newNumero)
 
+
+/* Reduce method */
+const list = [1, 2, 3, 4, 5];
+const listsN = list.slice().reduce((a,b) => a+b)
+console.log(listsN)
+
+/* Sort method */
+const sorts = [5, 2, 8, 1, 4];
+const sorted = sorts.sort((a,b)=> a-b)
+
+console.log(sorted)
+
+const dudes = [
+    { name: "Alice", age: 25 },
+    { name: "Bob", age: 30 },
+    { name: "Charlie", age: 20 },
+];
+
+const dudesort = dudes.sort((a,b) => a.name.localeCompare(b.name))
+console.log(dudesort)
