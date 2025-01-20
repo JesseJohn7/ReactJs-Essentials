@@ -109,11 +109,57 @@ const sorted = sorts.sort((a,b)=> a-b)
 
 console.log(sorted)
 
+/* Filter for array methods */
 const dudes = [
     { name: "Alice", age: 25 },
     { name: "Bob", age: 30 },
     { name: "Charlie", age: 20 },
 ];
 
-const dudesort = dudes.sort((a,b) => a.name.localeCompare(b.name))
-console.log(dudesort)
+const duda = dudes.map((dude)=>dude.age)
+
+console.log(duda)
+/* Filter for methods */
+const realmadrid = [
+    { name: "Kylian", age: 25 },
+    { name: "Miltao", age: 30 },
+    { name: "Arda", age: 20 }
+]
+
+const realPlayers = realmadrid.filter((real)=>real.age > 20)
+console.log(realPlayers)
+
+/* Immutable Arrays ,We'll add book object to an array*/
+const newBook = {
+id:6,
+title:"Harry potter and chamber of secrets",
+author : "J . K .Rowling"
+}
+
+const bookafter = [...realmadrid,newBook]
+console.log(bookafter)
+
+/* Delete book object from array */
+const bookdel = bookafter.filter((book) => book.id !==6) /* If 6 delete it else if lesser leave */
+console.log(bookdel)
+
+/* Async Javascript then as soon as promised fufilled takes response and converts to json it takes time so we need to add another then,so we have json the final data in javascript form
+PROMISES
+*/
+
+fetch(/* API */).then (res => res.json()).then((data) => console.log(data))
+console.log('I promise to commit today!') /* first prints before data  */
+
+/* Async await we can await promise it */
+async function getTodo() {
+const resp =  await fetch(/* api */) 
+const data = resp.json()
+console.log(data)
+
+return data
+}
+
+const todo = getTodo()
+console.log(todo)
+
+console.log("I commit")
